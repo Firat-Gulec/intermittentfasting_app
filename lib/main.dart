@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       debugShowCheckedModeBanner: false,
-      title: 'RXS',
+      title: 'FIRO - Intermitten Fasting',
       themeMode: themeProvider.themeMode,
       theme: MyThemes.lightTheme,
       darkTheme: MyThemes.darkTheme,

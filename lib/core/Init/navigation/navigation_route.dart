@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../features/onboard/view/splash_screen.dart';
-import '../../../features/onboard/view/welcome_view.dart';
+import '../../../features/onboarding/view/splash_screen.dart';
+import '../../../features/onboarding/view/welcome_view.dart';
 import 'navigation_constants.dart';
 
 
