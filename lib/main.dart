@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
-import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
 import 'core/Init/auth/auth_manager.dart';
 import 'core/Init/lang/language_manager.dart';
@@ -16,11 +15,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await EasyLocalization.ensureInitialized();
-  await Supabase.initialize(
-    url: 'https://sgulfrkzsmagewgaqqhe.supabase.co',
-    anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndWxmcmt6c21hZ2V3Z2FxcWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjExNzAwNDcsImV4cCI6MTk3Njc0NjA0N30.HkbBzlqSQyuPIQI4o47uW5blE8ojmBQGLLIzxoVheSg',
-  );
+ 
 
   runApp(
     MultiProvider(

@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../core/Init/cache/cache_manager.dart';
+import '../../../core/Init/cache/cache_manager.dart';
+
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);

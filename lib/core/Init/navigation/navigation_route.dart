@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-
-
-
-import '../../../features/login/view/login_view.dart';
-import '../../../features/login/view/signup_view.dart';
-import '../../../features/login/view/splash_screen.dart';
-import '../../../features/login/view/welcome_view.dart';
-import '../../../features/profile/view/profile_view.dart';
+import '../../../features/onboard/view/splash_screen.dart';
+import '../../../features/onboard/view/welcome_view.dart';
 import 'navigation_constants.dart';
 
 
@@ -26,9 +20,9 @@ class NavigationRoute {
             NavigationConstants.DEFAULT);
             
       case NavigationConstants.LOGIN:
-        return normalNavigate(LoginView(), NavigationConstants.LOGIN);
+        return normalNavigate(WelcomeView(), NavigationConstants.LOGIN);
 
-      case NavigationConstants.PROFILE_VIEW:
+  /*    case NavigationConstants.PROFILE_VIEW:
         return normalNavigate(
             const ProfileView(), NavigationConstants.PROFILE_VIEW);
 
@@ -39,7 +33,7 @@ class NavigationRoute {
       case NavigationConstants.ON_BOARD:
         return normalNavigate(
             const WelcomeView(), NavigationConstants.ON_BOARD);
- /*
+ 
       case NavigationConstants.QUESTIONNAIRE:
         return normalNavigate(
             const WelcomeSurveyView(), NavigationConstants.QUESTIONNAIRE);

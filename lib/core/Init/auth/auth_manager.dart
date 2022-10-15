@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../model/user_model.dart';
 import '../cache/cache_manager.dart';
 
 
@@ -16,7 +15,7 @@ class AuthenticationManager extends CacheManager {
     fetchUserLogin();
   }
   bool isLogin = false;
-    UserModel? model;
+
 
   Future<void> fetchUserLogin() async {
     final token = await getUserLogin();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+
 
 class AppConstant {
   // ignore: constant_identifier_names
@@ -99,8 +99,6 @@ const countryList = [
 ];
 
 
-
-final supabase = Supabase.instance.client;
 
 extension ShowSnackBar on BuildContext {
   void showSnackBar({
