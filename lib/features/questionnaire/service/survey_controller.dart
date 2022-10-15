@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../core/constants.dart';
+import '../../../core/constants.dart';
 
 
 
