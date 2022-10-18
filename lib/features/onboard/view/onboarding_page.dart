@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:intermittentfasting_app/features/onboard/view/welcome_view.dart';
+import 'package:intermittentfasting_app/features/questionnaire/view/questionnaire_view.dart';
 
 
 class Onboarding_View extends StatelessWidget {
@@ -18,7 +19,7 @@ class Onboarding_View extends StatelessWidget {
         Navigator.push(
           context,
           CupertinoPageRoute(
-            builder: (context) => WelcomeView(),
+            builder: (context) => QuestionnaireView(),
           ),
         );
       },
@@ -43,7 +44,7 @@ class Onboarding_View extends StatelessWidget {
         Navigator.push(
           context,
           CupertinoPageRoute(
-            builder: (context) => WelcomeView(),
+            builder: (context) => QuestionnaireView(),
           ),
         );
       },
