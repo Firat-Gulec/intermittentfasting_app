@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../features/onboarding/view/splash_screen.dart';
-import '../../../features/onboarding/view/welcome_view.dart';
+import 'package:intermittentfasting_app/features/onboard/view/splash_screen.dart';
+
+import 'package:intermittentfasting_app/features/questionnaire/view/questionnaire_view.dart';
+import '../../../features/onboard/view/onboarding_page.dart';
+
 import 'navigation_constants.dart';
 
 
@@ -19,13 +22,13 @@ class NavigationRoute {
             SplashScreen(title: 'RXS'),
             NavigationConstants.DEFAULT);
             
-      case NavigationConstants.LOGIN:
-        return normalNavigate(WelcomeView(), NavigationConstants.LOGIN);
+      case NavigationConstants.ON_BOARD:
+        return normalNavigate(Onboarding_View(), NavigationConstants.ON_BOARD);
 
-  /*    case NavigationConstants.PROFILE_VIEW:
+    case NavigationConstants.QUESTIONNAIRE:
         return normalNavigate(
-            const ProfileView(), NavigationConstants.PROFILE_VIEW);
-
+            const QuestionnaireView(), NavigationConstants.QUESTIONNAIRE);
+ /* 
             case NavigationConstants.PROFILE_SIGNUP:
         return normalNavigate(
             const RegisterForm(), NavigationConstants.PROFILE_SIGNUP);
@@ -53,7 +56,7 @@ class NavigationRoute {
 
       default:
         return MaterialPageRoute(
-          builder: (context) => const WelcomeView(),
+          builder: (context) => SplashScreen(title: 'test',),
         );
     }
   }

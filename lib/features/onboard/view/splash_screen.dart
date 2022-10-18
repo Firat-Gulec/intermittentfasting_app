@@ -23,11 +23,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> with CacheManager {
   bool _isVisible = true;
   NavigationService navigation = NavigationService.instance;
-  late final String userName;
-  late final String userPass;
-  late final String navigateString;
-  late final model;
-  late final enforcer;
+ 
   AuthenticationManager readAuthManager() =>
       context.read<AuthenticationManager>();
 
@@ -35,13 +31,8 @@ class _SplashScreenState extends State<SplashScreen> with CacheManager {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
      
-      userName = prefs.getString("name") ?? "null";
-      userPass = prefs.getString("password") ?? "null";
+      
     });
-    if (userName != "null") {
-     // final res = await SupabaseHelper().signinExitingUser(userName, userPass);
-      navigation.navigateToPage(path: NavigationConstants.PROFILE_VIEW);
-    }
   }
 
   _SplashScreenState() {
@@ -49,11 +40,7 @@ class _SplashScreenState extends State<SplashScreen> with CacheManager {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       setState(() {
         loadUserId();
-        navigateString = prefs.getString("navigate") ?? "/login";
-        readAuthManager().fetchUserLogin();
-        // ignore: avoid_print
-        print(navigateString);
-        navigation.navigateToPage(path: navigateString);
+       navigation.navigateToPage(path: NavigationConstants.ON_BOARD);
       });
     });
     Timer(const Duration(milliseconds: 10), () {
